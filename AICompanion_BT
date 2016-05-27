@@ -1,0 +1,498 @@
+Begin Object Class=BehaviorTreeGraphNode_Root Name="BehaviorTreeGraphNode_Root_0"
+   Begin Object Class=EdGraphPin Name="EdGraphPin_38985"
+   End Object
+   Begin Object Name="EdGraphPin_38985"
+      PinName="In"
+      Direction=EGPD_Output
+      PinType=(PinCategory="SingleComposite")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_6.EdGraphPin_40817'
+   End Object
+   BlackboardAsset=BlackboardData'/Game/CompanionQuest/AI/AICompanionBB.AICompanionBB'
+   Pins(0)=EdGraphPin'EdGraphPin_38985'
+   NodePosX=592
+   NodePosY=-96
+   NodeGuid=506DA9A94B7F859093F998B8FF83F752
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Composite Name="BehaviorTreeGraphNode_Composite_6"
+   Begin Object Class=BTComposite_Selector Name="BTComposite_Selector_12"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_40817"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_40818"
+   End Object
+   Begin Object Name="BTComposite_Selector_12"
+      Children(0)=(ChildComposite=BTComposite_Selector'BehaviorTreeGraphNode_Composite_29.BTComposite_Selector_14',Decorators=(BTDecorator_Blackboard'BehaviorTreeGraphNode_Decorator_220.BTDecorator_Blackboard_13',CheckState_C'BehaviorTreeGraphNode_Decorator_19.CheckState_C_61'))
+      Children(1)=(ChildComposite=BTComposite_Sequence'BehaviorTreeGraphNode_Composite_14.BTComposite_Sequence_33',Decorators=(BTDecorator_Blackboard'BehaviorTreeGraphNode_Decorator_133.BTDecorator_Blackboard_12',CheckState_C'BehaviorTreeGraphNode_Decorator_39.CheckState_C_60'))
+      Children(2)=(ChildComposite=BTComposite_Selector'BehaviorTreeGraphNode_Composite_11.BTComposite_Selector_13')
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+   End Object
+   Begin Object Name="EdGraphPin_40817"
+      PinName="In"
+      PinType=(PinCategory="MultipleNodes")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Root_0.EdGraphPin_38985'
+   End Object
+   Begin Object Name="EdGraphPin_40818"
+      PinName="Out"
+      Direction=EGPD_Output
+      PinType=(PinCategory="MultipleNodes")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_29.EdGraphPin_46341'
+      LinkedTo(1)=EdGraphPin'BehaviorTreeGraphNode_Composite_14.EdGraphPin_40821'
+      LinkedTo(2)=EdGraphPin'BehaviorTreeGraphNode_Composite_11.EdGraphPin_40819'
+   End Object
+   NodeInstance=BTComposite_Selector'BTComposite_Selector_12'
+   CopySubNodeIndex=1
+   Pins(0)=EdGraphPin'EdGraphPin_40817'
+   Pins(1)=EdGraphPin'EdGraphPin_40818'
+   NodePosX=576
+   NodePosY=16
+   NodeGuid=4B8B489B4F0C7073D3D6D993A707B3A1
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Composite Name="BehaviorTreeGraphNode_Composite_11"
+   Begin Object Class=BTComposite_Selector Name="BTComposite_Selector_13"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_40819"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_40820"
+   End Object
+   Begin Object Name="BTComposite_Selector_13"
+      Children(0)=(ChildTask=MoveToAcceptableRadius_C'BehaviorTreeGraphNode_Task_98.MoveToAcceptableRadius_C_28',Decorators=(DistanceCheck_C'BehaviorTreeGraphNode_Decorator_64.DistanceCheck_C_30'))
+      NodeName="Follow Player"
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_6.BTComposite_Selector_12'
+   End Object
+   Begin Object Name="EdGraphPin_40819"
+      PinName="In"
+      PinType=(PinCategory="MultipleNodes")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_6.EdGraphPin_40818'
+   End Object
+   Begin Object Name="EdGraphPin_40820"
+      PinName="Out"
+      Direction=EGPD_Output
+      PinType=(PinCategory="MultipleNodes")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Task_98.EdGraphPin_42697'
+   End Object
+   NodeInstance=BTComposite_Selector'BTComposite_Selector_13'
+   CopySubNodeIndex=2
+   Pins(0)=EdGraphPin'EdGraphPin_40819'
+   Pins(1)=EdGraphPin'EdGraphPin_40820'
+   NodePosX=1408
+   NodePosY=304
+   NodeGuid=293B2B2449DC4CB65EEA29A6B2ACAF46
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Composite Name="BehaviorTreeGraphNode_Composite_14"
+   Begin Object Class=BTComposite_Sequence Name="BTComposite_Sequence_33"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_40821"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_40822"
+   End Object
+   Begin Object Name="BTComposite_Sequence_33"
+      Children(0)=(ChildTask=BTTask_PlayAnimation'BehaviorTreeGraphNode_Task_13.BTTask_PlayAnimation_28')
+      Children(1)=(ChildTask=BTTask_MoveTo'BehaviorTreeGraphNode_Task_40.BTTask_MoveTo_8')
+      Children(2)=(ChildTask=DamageTarget_C'BehaviorTreeGraphNode_Task_68.DamageTarget_C_28')
+      NodeName="AttackPlayerTarget"
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_6.BTComposite_Selector_12'
+   End Object
+   Begin Object Name="EdGraphPin_40821"
+      PinName="In"
+      PinType=(PinCategory="MultipleNodes")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_6.EdGraphPin_40818'
+   End Object
+   Begin Object Name="EdGraphPin_40822"
+      PinName="Out"
+      Direction=EGPD_Output
+      PinType=(PinCategory="MultipleNodes")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Task_13.EdGraphPin_38568'
+      LinkedTo(1)=EdGraphPin'BehaviorTreeGraphNode_Task_40.EdGraphPin_42221'
+      LinkedTo(2)=EdGraphPin'BehaviorTreeGraphNode_Task_68.EdGraphPin_43322'
+   End Object
+   Decorators(0)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_133'
+   Decorators(1)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_39'
+   NodeInstance=BTComposite_Sequence'BTComposite_Sequence_33'
+   SubNodes(0)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_133'
+   SubNodes(1)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_39'
+   CopySubNodeIndex=3
+   Pins(0)=EdGraphPin'EdGraphPin_40821'
+   Pins(1)=EdGraphPin'EdGraphPin_40822'
+   NodePosX=976
+   NodePosY=256
+   NodeGuid=00C3FEB6400446FD29586695BFCCF10C
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Composite Name="BehaviorTreeGraphNode_Composite_19"
+   Begin Object Class=BTComposite_Sequence Name="BTComposite_Sequence_34"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_40823"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_40824"
+   End Object
+   Begin Object Name="BTComposite_Sequence_34"
+      NodeName="ATAttackingPlayer"
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+   End Object
+   Begin Object Name="EdGraphPin_40823"
+      PinName="In"
+      PinType=(PinCategory="MultipleNodes")
+   End Object
+   Begin Object Name="EdGraphPin_40824"
+      PinName="Out"
+      Direction=EGPD_Output
+      PinType=(PinCategory="MultipleNodes")
+   End Object
+   NodeInstance=BTComposite_Sequence'BTComposite_Sequence_34'
+   CopySubNodeIndex=4
+   Pins(0)=EdGraphPin'EdGraphPin_40823'
+   Pins(1)=EdGraphPin'EdGraphPin_40824'
+   NodePosX=192
+   NodePosY=304
+   NodeGuid=17F529584187A72175271D9355B69BAF
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Task Name="BehaviorTreeGraphNode_Task_98"
+   Begin Object Class=EdGraphPin Name="EdGraphPin_42697"
+   End Object
+   Begin Object Class=MoveToAcceptableRadius_C Name="MoveToAcceptableRadius_C_28"
+   End Object
+   Begin Object Name="EdGraphPin_42697"
+      PinName="In"
+      PinType=(PinCategory="SingleComposite")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_11.EdGraphPin_40820'
+   End Object
+   Begin Object Name="MoveToAcceptableRadius_C_28"
+      PlayerLocation=(SelectedKeyName="PlayerLocation")
+      AcceptableRadius=250.000000
+      PlayerKey=(SelectedKeyName="TargetKey")
+      NodeName="Move To Acceptable Radius"
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_11.BTComposite_Selector_13'
+   End Object
+   Decorators(0)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_64'
+   ClassData=(AssetName="MoveToAcceptableRadius",GeneratedClassPackage="/Game/CompanionQuest/AI/MoveToAcceptableRadius",ClassName="MoveToAcceptableRadius_C")
+   NodeInstance=MoveToAcceptableRadius_C'MoveToAcceptableRadius_C_28'
+   SubNodes(0)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_64'
+   CopySubNodeIndex=5
+   Pins(0)=EdGraphPin'EdGraphPin_42697'
+   NodePosX=1408
+   NodePosY=432
+   NodeGuid=C73C315C47B33C760C97EBB7DC968A59
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Task Name="BehaviorTreeGraphNode_Task_13"
+   Begin Object Class=BTTask_PlayAnimation Name="BTTask_PlayAnimation_28"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_38568"
+   End Object
+   Begin Object Name="BTTask_PlayAnimation_28"
+      AnimationToPlay=AnimSequence'/Game/CompanionQuest/Assasin/Animations/ATTACK_1_Anim.ATTACK_1_Anim'
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Sequence'BehaviorTreeGraphNode_Composite_14.BTComposite_Sequence_33'
+   End Object
+   Begin Object Name="EdGraphPin_38568"
+      PinName="In"
+      PinType=(PinCategory="SingleComposite")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_14.EdGraphPin_40822'
+   End Object
+   NodeInstance=BTTask_PlayAnimation'BTTask_PlayAnimation_28'
+   CopySubNodeIndex=6
+   Pins(0)=EdGraphPin'EdGraphPin_38568'
+   NodePosX=816
+   NodePosY=544
+   NodeGuid=31593FAE4E16C300E697069DFCC2C2F5
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Task Name="BehaviorTreeGraphNode_Task_40"
+   Begin Object Class=BTTask_MoveTo Name="BTTask_MoveTo_8"
+      Begin Object Class=BlackboardKeyType_Object Name="BlackboardKey_Object" Archetype=BlackboardKeyType_Object'Default__BTTask_MoveTo:BlackboardKey_Object'
+      End Object
+      Begin Object Class=BlackboardKeyType_Vector Name="BlackboardKey_Vector" Archetype=BlackboardKeyType_Vector'Default__BTTask_MoveTo:BlackboardKey_Vector'
+      End Object
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_42221"
+   End Object
+   Begin Object Name="BTTask_MoveTo_8"
+      Begin Object Name="BlackboardKey_Object"
+      End Object
+      Begin Object Name="BlackboardKey_Vector"
+      End Object
+      BlackboardKey=(SelectedKeyName="TargetKey")
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Sequence'BehaviorTreeGraphNode_Composite_14.BTComposite_Sequence_33'
+   End Object
+   Begin Object Name="EdGraphPin_42221"
+      PinName="In"
+      PinType=(PinCategory="SingleComposite")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_14.EdGraphPin_40822'
+   End Object
+   NodeInstance=BTTask_MoveTo'BTTask_MoveTo_8'
+   CopySubNodeIndex=7
+   Pins(0)=EdGraphPin'EdGraphPin_42221'
+   NodePosX=1024
+   NodePosY=544
+   NodeGuid=477FD3E04B5596597F6BDC8B6B7CBE43
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Task Name="BehaviorTreeGraphNode_Task_68"
+   Begin Object Class=DamageTarget_C Name="DamageTarget_C_28"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_43322"
+   End Object
+   Begin Object Name="DamageTarget_C_28"
+      Target=(SelectedKeyName="TargetKey")
+      NodeName="DamageTarget"
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Sequence'BehaviorTreeGraphNode_Composite_14.BTComposite_Sequence_33'
+   End Object
+   Begin Object Name="EdGraphPin_43322"
+      PinName="In"
+      PinType=(PinCategory="SingleComposite")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_14.EdGraphPin_40822'
+   End Object
+   ClassData=(AssetName="DamageTarget",GeneratedClassPackage="/Game/CompanionQuest/AI/DamageTarget",ClassName="DamageTarget_C")
+   NodeInstance=DamageTarget_C'DamageTarget_C_28'
+   CopySubNodeIndex=8
+   Pins(0)=EdGraphPin'EdGraphPin_43322'
+   NodePosX=1168
+   NodePosY=512
+   NodeGuid=D3AFA5104D16FEB1F85ECDAD2EF57B40
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Task Name="BehaviorTreeGraphNode_Task_111"
+   Begin Object Class=BTTask_MoveTo Name="BTTask_MoveTo_9"
+      Begin Object Class=BlackboardKeyType_Object Name="BlackboardKey_Object" Archetype=BlackboardKeyType_Object'Default__BTTask_MoveTo:BlackboardKey_Object'
+      End Object
+      Begin Object Class=BlackboardKeyType_Vector Name="BlackboardKey_Vector" Archetype=BlackboardKeyType_Vector'Default__BTTask_MoveTo:BlackboardKey_Vector'
+      End Object
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_45103"
+   End Object
+   Begin Object Name="BTTask_MoveTo_9"
+      Begin Object Name="BlackboardKey_Object"
+      End Object
+      Begin Object Name="BlackboardKey_Vector"
+      End Object
+      bObserveBlackboardValue=True
+      BlackboardKey=(SelectedKeyName="MoveLocation")
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_29.BTComposite_Selector_14'
+   End Object
+   Begin Object Name="EdGraphPin_45103"
+      PinName="In"
+      PinType=(PinCategory="SingleComposite")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_29.EdGraphPin_46342'
+   End Object
+   Decorators(0)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_256'
+   Decorators(1)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_238'
+   NodeInstance=BTTask_MoveTo'BTTask_MoveTo_9'
+   SubNodes(0)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_256'
+   SubNodes(1)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_238'
+   CopySubNodeIndex=9
+   Pins(0)=EdGraphPin'EdGraphPin_45103'
+   NodePosY=640
+   NodeGuid=657DED19461D0EEE6937FBA0601C952D
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Task Name="BehaviorTreeGraphNode_Task_169"
+   Begin Object Class=EdGraphPin Name="EdGraphPin_46256"
+   End Object
+   Begin Object Class=ResetBlackboardValue_C Name="ResetBlackboardValue_C_28"
+   End Object
+   Begin Object Name="EdGraphPin_46256"
+      PinName="In"
+      PinType=(PinCategory="SingleComposite")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_29.EdGraphPin_46342'
+   End Object
+   Begin Object Name="ResetBlackboardValue_C_28"
+      BlackboardKey=(SelectedKeyName="MoveLocation")
+      NodeName="Reset"
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_29.BTComposite_Selector_14'
+   End Object
+   ClassData=(AssetName="ResetBlackboardValue",GeneratedClassPackage="/Game/CompanionQuest/AI/ResetBlackboardValue",ClassName="ResetBlackboardValue_C")
+   NodeInstance=ResetBlackboardValue_C'ResetBlackboardValue_C_28'
+   CopySubNodeIndex=10
+   Pins(0)=EdGraphPin'EdGraphPin_46256'
+   NodePosX=720
+   NodePosY=640
+   NodeGuid=9138D14E4CDBA6552F020898629F1258
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Composite Name="BehaviorTreeGraphNode_Composite_29"
+   Begin Object Class=BTComposite_Selector Name="BTComposite_Selector_14"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_46341"
+   End Object
+   Begin Object Class=EdGraphPin Name="EdGraphPin_46342"
+   End Object
+   Begin Object Name="BTComposite_Selector_14"
+      Children(0)=(ChildTask=BTTask_MoveTo'BehaviorTreeGraphNode_Task_111.BTTask_MoveTo_9',Decorators=(BTDecorator_DoesPathExist'BehaviorTreeGraphNode_Decorator_256.BTDecorator_DoesPathExist_6',BTDecorator_IsAtLocation'BehaviorTreeGraphNode_Decorator_238.BTDecorator_IsAtLocation_6'))
+      Children(1)=(ChildTask=LookForEnemy_C'BehaviorTreeGraphNode_Task_254.LookForEnemy_C_28')
+      Children(2)=(ChildTask=ResetBlackboardValue_C'BehaviorTreeGraphNode_Task_169.ResetBlackboardValue_C_28')
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_6.BTComposite_Selector_12'
+   End Object
+   Begin Object Name="EdGraphPin_46341"
+      PinName="In"
+      PinType=(PinCategory="MultipleNodes")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_6.EdGraphPin_40818'
+   End Object
+   Begin Object Name="EdGraphPin_46342"
+      PinName="Out"
+      Direction=EGPD_Output
+      PinType=(PinCategory="MultipleNodes")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Task_111.EdGraphPin_45103'
+      LinkedTo(1)=EdGraphPin'BehaviorTreeGraphNode_Task_254.EdGraphPin_60690'
+      LinkedTo(2)=EdGraphPin'BehaviorTreeGraphNode_Task_169.EdGraphPin_46256'
+   End Object
+   Decorators(0)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_220'
+   Decorators(1)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_19'
+   NodeInstance=BTComposite_Selector'BTComposite_Selector_14'
+   SubNodes(0)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_220'
+   SubNodes(1)=BehaviorTreeGraphNode_Decorator'BehaviorTreeGraphNode_Decorator_19'
+   CopySubNodeIndex=11
+   Pins(0)=EdGraphPin'EdGraphPin_46341'
+   Pins(1)=EdGraphPin'EdGraphPin_46342'
+   NodePosX=512
+   NodePosY=256
+   NodeGuid=B46D402F4C6A1EE93573E68F1DDAFF5F
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Task Name="BehaviorTreeGraphNode_Task_254"
+   Begin Object Class=EdGraphPin Name="EdGraphPin_60690"
+   End Object
+   Begin Object Class=LookForEnemy_C Name="LookForEnemy_C_28"
+   End Object
+   Begin Object Name="EdGraphPin_60690"
+      PinName="In"
+      PinType=(PinCategory="SingleComposite")
+      LinkedTo(0)=EdGraphPin'BehaviorTreeGraphNode_Composite_29.EdGraphPin_46342'
+   End Object
+   Begin Object Name="LookForEnemy_C_28"
+      TargetKey=(SelectedKeyName="TargetKey")
+      State=(SelectedKeyName="State")
+      NodeName="LookForEnemy"
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_29.BTComposite_Selector_14'
+   End Object
+   ClassData=(AssetName="LookForAndDamageEnemy",GeneratedClassPackage="/Game/CompanionQuest/AI/LookForAndDamageEnemy",ClassName="LookForAndDamageEnemy_C")
+   NodeInstance=LookForEnemy_C'LookForEnemy_C_28'
+   CopySubNodeIndex=12
+   Pins(0)=EdGraphPin'EdGraphPin_60690'
+   NodePosX=512
+   NodePosY=640
+   NodeGuid=962AA0824F1EDB51CF117690692F85AF
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Decorator Name="BehaviorTreeGraphNode_Decorator_133"
+   Begin Object Class=BTDecorator_Blackboard Name="BTDecorator_Blackboard_12"
+   End Object
+   Begin Object Name="BTDecorator_Blackboard_12"
+      CachedDescription="TargetKey is Set"
+      NotifyObserver=ValueChange
+      BlackboardKey=(SelectedKeyName="TargetKey")
+      NodeName="Is Target Set"
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_6.BTComposite_Selector_12'
+   End Object
+   NodeInstance=BTDecorator_Blackboard'BTDecorator_Blackboard_12'
+   CopySubNodeIndex=3
+   NodeGuid=B9C3AC39421BC8D7BB4CC78AC3BA3070
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Decorator Name="BehaviorTreeGraphNode_Decorator_39"
+   Begin Object Class=CheckState_C Name="CheckState_C_60"
+   End Object
+   Begin Object Name="CheckState_C_60"
+      State=(SelectedKeyName="State")
+      EnumValue=3
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_6.BTComposite_Selector_12'
+   End Object
+   ClassData=(AssetName="CheckState",GeneratedClassPackage="/Game/CompanionQuest/AI/CheckState",ClassName="CheckState_C")
+   NodeInstance=CheckState_C'CheckState_C_60'
+   CopySubNodeIndex=3
+   NodeGuid=A04AF37D4E13618CDA975FBD35ECA030
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Decorator Name="BehaviorTreeGraphNode_Decorator_64"
+   Begin Object Class=DistanceCheck_C Name="DistanceCheck_C_30"
+   End Object
+   Begin Object Name="DistanceCheck_C_30"
+      AcceptableDistance=300.000000
+      PlayerKey=(SelectedKeyName="PlayerKey")
+      bInverseCondition=True
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_11.BTComposite_Selector_13'
+   End Object
+   ClassData=(AssetName="DistanceCheck",GeneratedClassPackage="/Game/CompanionQuest/AI/DistanceCheck",ClassName="DistanceCheck_C")
+   NodeInstance=DistanceCheck_C'DistanceCheck_C_30'
+   CopySubNodeIndex=5
+   NodeGuid=28E825CF477F3B8EE5091E8E92D2BECB
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Decorator Name="BehaviorTreeGraphNode_Decorator_256"
+   Begin Object Class=BTDecorator_DoesPathExist Name="BTDecorator_DoesPathExist_6"
+      Begin Object Class=BlackboardKeyType_Object Name="BlackboardKeyA_Object" Archetype=BlackboardKeyType_Object'Default__BTDecorator_DoesPathExist:BlackboardKeyA_Object'
+      End Object
+      Begin Object Class=BlackboardKeyType_Vector Name="BlackboardKeyA_Vector" Archetype=BlackboardKeyType_Vector'Default__BTDecorator_DoesPathExist:BlackboardKeyA_Vector'
+      End Object
+      Begin Object Class=BlackboardKeyType_Object Name="BlackboardKeyB_Object" Archetype=BlackboardKeyType_Object'Default__BTDecorator_DoesPathExist:BlackboardKeyB_Object'
+      End Object
+      Begin Object Class=BlackboardKeyType_Vector Name="BlackboardKeyB_Vector" Archetype=BlackboardKeyType_Vector'Default__BTDecorator_DoesPathExist:BlackboardKeyB_Vector'
+      End Object
+   End Object
+   Begin Object Name="BTDecorator_DoesPathExist_6"
+      Begin Object Name="BlackboardKeyA_Object"
+      End Object
+      Begin Object Name="BlackboardKeyA_Vector"
+      End Object
+      Begin Object Name="BlackboardKeyB_Object"
+      End Object
+      Begin Object Name="BlackboardKeyB_Vector"
+      End Object
+      BlackboardKeyA=
+      BlackboardKeyB=(SelectedKeyName="MoveLocation")
+      PathQueryType=NavmeshRaycast2D
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_29.BTComposite_Selector_14'
+   End Object
+   NodeInstance=BTDecorator_DoesPathExist'BTDecorator_DoesPathExist_6'
+   CopySubNodeIndex=9
+   NodeGuid=1BC3482443E33BE4AAF5E3B3D6CE0D0F
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Decorator Name="BehaviorTreeGraphNode_Decorator_238"
+   Begin Object Class=BTDecorator_IsAtLocation Name="BTDecorator_IsAtLocation_6"
+      Begin Object Class=BlackboardKeyType_Object Name="BlackboardKey_Object" Archetype=BlackboardKeyType_Object'Default__BTDecorator_IsAtLocation:BlackboardKey_Object'
+      End Object
+      Begin Object Class=BlackboardKeyType_Vector Name="BlackboardKey_Vector" Archetype=BlackboardKeyType_Vector'Default__BTDecorator_IsAtLocation:BlackboardKey_Vector'
+      End Object
+   End Object
+   Begin Object Name="BTDecorator_IsAtLocation_6"
+      Begin Object Name="BlackboardKey_Object"
+      End Object
+      Begin Object Name="BlackboardKey_Vector"
+      End Object
+      BlackboardKey=(SelectedKeyName="MoveLocation")
+      bInverseCondition=True
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_29.BTComposite_Selector_14'
+   End Object
+   NodeInstance=BTDecorator_IsAtLocation'BTDecorator_IsAtLocation_6'
+   CopySubNodeIndex=9
+   NodeGuid=BF29059C47B109DE20360D88457C2E18
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Decorator Name="BehaviorTreeGraphNode_Decorator_220"
+   Begin Object Class=BTDecorator_Blackboard Name="BTDecorator_Blackboard_13"
+   End Object
+   Begin Object Name="BTDecorator_Blackboard_13"
+      CachedDescription="MoveLocation is Set"
+      BlackboardKey=(SelectedKeyName="MoveLocation")
+      NodeName="Is Move Location Set"
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_6.BTComposite_Selector_12'
+   End Object
+   NodeInstance=BTDecorator_Blackboard'BTDecorator_Blackboard_13'
+   CopySubNodeIndex=11
+   NodeGuid=E2C2E7384D42780772122BA7323EEDDD
+End Object
+Begin Object Class=BehaviorTreeGraphNode_Decorator Name="BehaviorTreeGraphNode_Decorator_19"
+   Begin Object Class=CheckState_C Name="CheckState_C_61"
+   End Object
+   Begin Object Name="CheckState_C_61"
+      State=(SelectedKeyName="State")
+      EnumValue=1
+      TreeAsset=BehaviorTree'/Game/CompanionQuest/AI/AICompanionBT.AICompanionBT'
+      ParentNode=BTComposite_Selector'BehaviorTreeGraphNode_Composite_6.BTComposite_Selector_12'
+   End Object
+   ClassData=(AssetName="CheckState",GeneratedClassPackage="/Game/CompanionQuest/AI/CheckState",ClassName="CheckState_C")
+   NodeInstance=CheckState_C'CheckState_C_61'
+   CopySubNodeIndex=11
+   NodeGuid=BCDB10F24520DE5438B56B910B7AE97D
+End Object
